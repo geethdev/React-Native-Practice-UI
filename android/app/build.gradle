@@ -117,3 +117,6 @@ dependencies {
         implementation jscFlavor
     }
 }
+
+// Bundle custom fonts from react-native-vector-icons so icons render on Android
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
