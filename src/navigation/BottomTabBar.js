@@ -5,11 +5,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { colors, spacing, typography, shadows } from '../utilities/theme';
 
 const ICONS = {
-  Home: { name: 'home-outline' },
-  Explore: { name: 'apps-box-outline' },
-  Favourite: { name: 'heart-outline' },
-  Breathe: { name: 'leaf-outline' },
-  Profile: { name: 'account-outline' },
+  Home: {name: 'home'},
+  Explore: {name: 'view-grid'},
+  Favourite: {name: 'heart'},
+  Breathe: {name: 'leaf'},
+  Profile: {name: 'account'},
 };
 
 export default function BottomTabBar({ state, descriptors, navigation }) {
