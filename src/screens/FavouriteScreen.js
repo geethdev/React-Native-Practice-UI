@@ -1,30 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import AppHeader from '../components/AppHeader';
+import { commonStyles } from '../utilities/theme';
 
 export default function FavouriteScreen({ navigation }) {
   return (
-    <View style={styles.container}>
+    <View style={commonStyles.screenContainer}>
       <AppHeader navigation={navigation} />
-      <View style={styles.content}>
-        <Text style={styles.title}>Favourite</Text>
+      <View style={commonStyles.centeredContent}>
+        <Text style={commonStyles.screenTitle}>Favourite</Text>
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: '#FFFFFF' 
-  },
-  content: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: { 
-    fontSize: 18, 
-    fontWeight: '600' 
-  },
-});
