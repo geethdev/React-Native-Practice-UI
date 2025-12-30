@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { colors } from './colors';
+import { spacing } from './spacing';
 
 export const commonStyles = StyleSheet.create({
   // Container Styles
@@ -49,5 +50,52 @@ export const commonStyles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '400',
     color: colors.text.tertiary,
+  },
+
+  // Mood Selector Styles
+  moodContainer: {
+    paddingVertical: spacing.lg,
+    paddingHorizontal: spacing.md,
+  },
+
+  moodsScrollContainer: {
+    paddingVertical: spacing.sm,
+  },
+
+  moodItem: {
+    alignItems: 'center',
+    marginRight: spacing.lg,
+    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.md,
+    borderRadius: 16,
+    backgroundColor: colors.background.surface,
+    minWidth: 80,
+  },
+
+  moodItemSelected: {
+    backgroundColor: colors.primary,
+  },
+
+  moodEmojiContainer: {
+    width: 50,
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: spacing.xs,
+  },
+
+  moodEmoji: {
+    fontSize: 32,
+  },
+
+  moodLabel: {
+    fontSize: 12,
+    fontWeight: '500',
+    color: colors.text.secondary,
+  },
+
+  moodLabelSelected: {
+    color: '#FFFFFF',
+    fontWeight: '600',
   },
 });

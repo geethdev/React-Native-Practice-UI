@@ -1,10 +1,15 @@
 export const colors = {
-  background: '#ffffff',
-  surface: '#f9fafb',
-  primary: '#5a7d7c',
+  background: {
+    primary: '#FFFFFF',
+    surface: '#F9FAFB',
+  },
+  primary: '#5c5f5fff',
   primaryMuted: '#8ca4a3',
   accent: '#9ca3af',
-  text: '#111827',
-  mutedText: '#6b7280',
+  text: {
+    primary: '#111827',
+    secondary: '#6b7280',
+    tertiary: '#9ca3af',
+  },
   border: '#e5e7eb',
 };

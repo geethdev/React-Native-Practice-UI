@@ -9,7 +9,9 @@ const AppHeader = ({ navigation, title = 'Listen. Feel. Heal' }) => {
     <SafeAreaView edges={['top']} style={styles.safeArea}>
       <View style={styles.header}>
         <TouchableOpacity
-          onPress={() => navigation.openDrawer()}
+          onPress={() => {
+            alert('Menu button pressed');
+          }}
           style={styles.iconButton}
         >
           <Icon name="menu" size={24} color={colors.text.primary} />
@@ -20,7 +22,7 @@ const AppHeader = ({ navigation, title = 'Listen. Feel. Heal' }) => {
         <TouchableOpacity
           onPress={() => {
             // Handle notification press
-            console.log('Notification pressed');
+            alert('Notifications button pressed');
           }}
           style={styles.iconButton}
         >

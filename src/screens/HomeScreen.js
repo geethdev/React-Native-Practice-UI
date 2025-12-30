@@ -1,15 +1,20 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import AppHeader from '../components/AppHeader';
+import MoodSelector from '../components/MoodSelector';
 import { commonStyles } from '../utilities/theme';
 
 export default function HomeScreen({ navigation }) {
+  const handleMoodSelect = mood => {
+    console.log('Selected mood:', mood);
+  };
+
   return (
     <View style={commonStyles.screenContainer}>
       <AppHeader navigation={navigation} />
-      <View style={commonStyles.centeredContent}>
-        <Text style={commonStyles.screenTitle}>Home</Text>
-      </View>
+      <ScrollView>
+        <MoodSelector onMoodSelect={handleMoodSelect} />
+      </ScrollView>
     </View>
   );
 }
