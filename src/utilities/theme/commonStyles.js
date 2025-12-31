@@ -98,4 +98,48 @@ export const commonStyles = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: '600',
   },
+
+  // Recommendations Section Styles
+  recommendationSection: {
+    paddingTop: spacing.md,
+    paddingBottom: spacing.lg,
+  },
+
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: colors.text.primary,
+    paddingHorizontal: spacing.md,
+    marginBottom: spacing.md,
+  },
+
+  recommendationScroll: {
+    paddingHorizontal: spacing.md,
+  },
+
+  recommendationCard: {
+    marginRight: spacing.md,
+    width: 180,
+  },
+
+  recommendationImage: {
+    width: 180,
+    height: 120,
+    borderRadius: 12,
+    backgroundColor: colors.background.surface,
+  },
+
+  recommendationTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.text.primary,
+    marginTop: spacing.sm,
+  },
+
+  recommendationSubtitle: {
+    fontSize: 12,
+    fontWeight: '400',
+    color: colors.text.secondary,
+    marginTop: spacing.xxs,
+  },
 });
