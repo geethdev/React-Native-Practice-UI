@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import { commonStyles } from '../utilities/theme';
 
 const recommendations = [
@@ -34,35 +34,37 @@ const RecommendationsSection = ({ userName = 'Kevin' }) => {
     alert(`You selected: ${item.title} by ${item.subtitle}`);
   };
 
+  const renderItem = ({ item }) => (
+    <TouchableOpacity
+      style={commonStyles.recommendationCard}
+      onPress={() => handleCardPress(item)}
+      activeOpacity={0.8}
+    >
+      <Image
+        source={{ uri: item.image }}
+        style={commonStyles.recommendationImage}
+        resizeMode="cover"
+      />
+      <Text style={commonStyles.recommendationTitle} numberOfLines={1}>
+        {item.title}
+      </Text>
+      <Text style={commonStyles.recommendationSubtitle} numberOfLines={1}>
+        {item.subtitle}
+      </Text>
+    </TouchableOpacity>
+  );
+
   return (
     <View style={commonStyles.recommendationSection}>
       <Text style={commonStyles.sectionTitle}>Made for You, {userName}</Text>
-      <ScrollView
+      <FlatList
+        data={recommendations}
+        renderItem={renderItem}
+        keyExtractor={item => item.id.toString()}
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={commonStyles.recommendationScroll}
-      >
-        {recommendations.map(item => (
-          <TouchableOpacity
-            key={item.id}
-            style={commonStyles.recommendationCard}
-            onPress={() => handleCardPress(item)}
-            activeOpacity={0.8}
-          >
-            <Image
-              source={{ uri: item.image }}
-              style={commonStyles.recommendationImage}
-              resizeMode="cover"
-            />
-            <Text style={commonStyles.recommendationTitle} numberOfLines={1}>
-              {item.title}
-            </Text>
-            <Text style={commonStyles.recommendationSubtitle} numberOfLines={1}>
-              {item.subtitle}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+      />
     </View>
   );
 };
