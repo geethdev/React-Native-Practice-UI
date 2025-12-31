@@ -142,4 +142,59 @@ export const commonStyles = StyleSheet.create({
     color: colors.text.secondary,
     marginTop: spacing.xxs,
   },
+
+  // Play Random Section Styles
+  playRandomSection: {
+    paddingTop: spacing.md,
+    paddingBottom: spacing.xl,
+  },
+
+  horizontalGridRow: {
+    paddingHorizontal: spacing.md,
+    marginBottom: spacing.sm,
+  },
+
+  horizontalGridCard: {
+    width: 140,
+    marginRight: spacing.md,
+    borderRadius: 12,
+    overflow: 'hidden',
+    backgroundColor: colors.background.surface,
+    position: 'relative',
+  },
+
+  horizontalGridCardImage: {
+    width: 140,
+    height: 140,
+    backgroundColor: colors.background.surface,
+  },
+
+  favoriteButton: {
+    position: 'absolute',
+    top: spacing.sm,
+    right: spacing.sm,
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  gridCardContent: {
+    padding: spacing.sm,
+  },
+
+  gridCardTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: colors.text.primary,
+    marginBottom: spacing.xxs,
+  },
+
+  gridCardSubtitle: {
+    fontSize: 11,
+    fontWeight: '400',
+    color: colors.text.secondary,
+  },
 });
