@@ -1,15 +1,26 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, ScrollView } from 'react-native';
+import AppHeader from '../components/AppHeader';
+import MoodSelector from '../components/MoodSelector';
+import RecommendationsSection from '../components/RecommendationsSection';
+import PlayRandomSection from '../components/PlayRandomSection';
+import MyRoutineSection from '../components/MyRoutineSection';
+import { commonStyles } from '../utilities/theme';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
+  const handleMoodSelect = mood => {
+    console.log('Selected mood:', mood);
+  };
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
+    <View style={commonStyles.screenContainer}>
+      <AppHeader navigation={navigation} />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <MoodSelector onMoodSelect={handleMoodSelect} />
+        <RecommendationsSection userName="Kevin" />
+        <PlayRandomSection />
+        <MyRoutineSection />
+      </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  title: { fontSize: 18, fontWeight: '600' },
-});

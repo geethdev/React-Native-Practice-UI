@@ -72,13 +72,10 @@ export default function BottomTabBar({ state, descriptors, navigation }) {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: colors.background,
+    backgroundColor: colors.background.primary,
     flexDirection: 'row',
     paddingTop: spacing.sm,
     paddingHorizontal: spacing.md,
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
-    ...shadows.subtleTop,
   },
   tabItem: {
     flex: 1,
