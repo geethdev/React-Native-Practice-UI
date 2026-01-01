@@ -197,4 +197,82 @@ export const commonStyles = StyleSheet.create({
     fontWeight: '400',
     color: colors.text.secondary,
   },
+
+  // My Routine Section Styles
+  routineSection: {
+    paddingTop: spacing.md,
+    paddingBottom: spacing.xl,
+    paddingHorizontal: spacing.md,
+  },
+
+  routineHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: spacing.md,
+  },
+
+  routineHeaderIcons: {
+    flexDirection: 'row',
+    gap: spacing.sm,
+  },
+
+  routineIconButton: {
+    width: 32,
+    height: 32,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  routineItem: {
+    backgroundColor: colors.background.surface,
+    borderRadius: 12,
+    marginBottom: spacing.sm,
+    overflow: 'hidden',
+  },
+
+  routineContent: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: spacing.md,
+  },
+
+  routineTime: {
+    fontSize: 12,
+    fontWeight: '400',
+    color: colors.text.tertiary,
+    marginBottom: spacing.xxs,
+  },
+
+  routineActivity: {
+    fontSize: 15,
+    fontWeight: '500',
+    color: colors.text.primary,
+  },
+
+  addActivityButton: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: spacing.md,
+    marginTop: spacing.sm,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderStyle: 'dashed',
+    borderColor: '#CCCCCC',
+    backgroundColor: 'transparent',
+  },
+
+  addActivityContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.xs,
+  },
+
+  addActivityText: {
+    fontSize: 15,
+    fontWeight: '500',
+    color: '#00BCD4',
+  },
 });

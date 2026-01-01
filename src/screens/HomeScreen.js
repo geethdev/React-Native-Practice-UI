@@ -4,6 +4,7 @@ import AppHeader from '../components/AppHeader';
 import MoodSelector from '../components/MoodSelector';
 import RecommendationsSection from '../components/RecommendationsSection';
 import PlayRandomSection from '../components/PlayRandomSection';
+import MyRoutineSection from '../components/MyRoutineSection';
 import { commonStyles } from '../utilities/theme';
 
 export default function HomeScreen({ navigation }) {
@@ -18,6 +19,7 @@ export default function HomeScreen({ navigation }) {
         <MoodSelector onMoodSelect={handleMoodSelect} />
         <RecommendationsSection userName="Kevin" />
         <PlayRandomSection />
+        <MyRoutineSection />
       </ScrollView>
     </View>
   );
