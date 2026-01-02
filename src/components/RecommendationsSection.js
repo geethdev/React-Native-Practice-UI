@@ -56,7 +56,9 @@ const RecommendationsSection = ({ userName = 'Kevin' }) => {
 
   return (
     <View style={commonStyles.recommendationSection}>
-      <Text style={commonStyles.sectionTitle}>{strings.MADE_FOR_USER(userName)}</Text>
+      <Text style={commonStyles.sectionTitle}>
+        {strings.MADE_FOR_USER(userName)}
+      </Text>
       <FlatList
         data={recommendations}
         renderItem={renderItem}

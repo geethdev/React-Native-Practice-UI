@@ -97,7 +97,9 @@ const PlayRandomSection = () => {
 
   return (
     <View style={commonStyles.playRandomSection}>
-      <Text style={commonStyles.sectionTitle}>{strings.PLAY_SOMETHING_RANDOM}</Text>
+      <Text style={commonStyles.sectionTitle}>
+        {strings.PLAY_SOMETHING_RANDOM}
+      </Text>
       <View>
         <ScrollView
           horizontal

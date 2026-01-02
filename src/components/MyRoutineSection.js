@@ -76,7 +76,9 @@ const MyRoutineSection = () => {
       >
         <View style={commonStyles.addActivityContent}>
           <MaterialCommunityIcons name="plus" size={20} color="#00BCD4" />
-          <Text style={commonStyles.addActivityText}>{strings.ADD_ACTIVITY}</Text>
+          <Text style={commonStyles.addActivityText}>
+            {strings.ADD_ACTIVITY}
+          </Text>
         </View>
       </TouchableOpacity>
     </View>
