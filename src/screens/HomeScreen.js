@@ -5,7 +5,7 @@ import MoodSelector from '../components/MoodSelector';
 import RecommendationsSection from '../components/RecommendationsSection';
 import PlayRandomSection from '../components/PlayRandomSection';
 import MyRoutineSection from '../components/MyRoutineSection';
-import { commonStyles } from '../utilities/theme';
+import { commonStyles } from '../constants';
 
 export default function HomeScreen({ navigation }) {
   const handleMoodSelect = mood => {

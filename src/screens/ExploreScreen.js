@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import AppHeader from '../components/AppHeader';
-import { commonStyles } from '../utilities/theme';
+import { commonStyles } from '../constants';
 
 export default function ExploreScreen({ navigation }) {
   return (

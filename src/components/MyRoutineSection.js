@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { commonStyles } from '../utilities/theme';
+import { commonStyles, strings } from '../constants';
 
 const initialRoutines = [
   { id: 1, time: '6:45 am', activity: 'Take 3 slow breaths', completed: true },
@@ -24,13 +24,13 @@ const MyRoutineSection = () => {
 
   //stack navigation ,drawer, multiple languages, daram
   const handleAddActivity = () => {
-    alert('Add new activity');
+    alert(strings.ADD_NEW_ACTIVITY);
   };
 
   return (
     <View style={commonStyles.routineSection}>
       <View style={commonStyles.routineHeader}>
-        <Text style={commonStyles.sectionTitle}>My Routine</Text>
+        <Text style={commonStyles.sectionTitle}>{strings.MY_ROUTINE}</Text>
         <View style={commonStyles.routineHeaderIcons}>
           <TouchableOpacity style={commonStyles.routineIconButton}>
             <MaterialCommunityIcons
@@ -76,7 +76,7 @@ const MyRoutineSection = () => {
       >
         <View style={commonStyles.addActivityContent}>
           <MaterialCommunityIcons name="plus" size={20} color="#00BCD4" />
-          <Text style={commonStyles.addActivityText}>Add an activity</Text>
+          <Text style={commonStyles.addActivityText}>{strings.ADD_ACTIVITY}</Text>
         </View>
       </TouchableOpacity>
     </View>

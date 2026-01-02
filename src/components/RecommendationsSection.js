@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
-import { commonStyles } from '../utilities/theme';
+import { commonStyles, strings } from '../constants';
 
 const recommendations = [
   {
@@ -31,7 +31,7 @@ const recommendations = [
 
 const RecommendationsSection = ({ userName = 'Kevin' }) => {
   const handleCardPress = item => {
-    alert(`You selected: ${item.title} by ${item.subtitle}`);
+    alert(strings.ITEM_SELECTED(item.title, item.subtitle));
   };
 
   const renderItem = ({ item }) => (
@@ -56,7 +56,7 @@ const RecommendationsSection = ({ userName = 'Kevin' }) => {
 
   return (
     <View style={commonStyles.recommendationSection}>
-      <Text style={commonStyles.sectionTitle}>Made for You, {userName}</Text>
+      <Text style={commonStyles.sectionTitle}>{strings.MADE_FOR_USER(userName)}</Text>
       <FlatList
         data={recommendations}
         renderItem={renderItem}
