@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { commonStyles } from '../utilities/theme';
+import { commonStyles, strings } from '../constants';
 
 const playRandomData = [
   {
@@ -97,7 +97,9 @@ const PlayRandomSection = () => {
 
   return (
     <View style={commonStyles.playRandomSection}>
-      <Text style={commonStyles.sectionTitle}>Play Something Random</Text>
+      <Text style={commonStyles.sectionTitle}>
+        {strings.PLAY_SOMETHING_RANDOM}
+      </Text>
       <View>
         <ScrollView
           horizontal

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { colors, spacing, typography, shadows } from '../utilities/theme';
+import { colors, spacing, typography, shadows } from '../constants';
 
 const ICONS = {
   Home: { name: 'home' },

@@ -2,15 +2,15 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { colors, spacing } from '../utilities/theme';
+import { colors, spacing, strings } from '../constants';
 
-const AppHeader = ({ navigation, title = 'Listen. Feel. Heal' }) => {
+const AppHeader = ({ navigation, title = strings.APP_TITLE }) => {
   return (
     <SafeAreaView edges={['top']} style={styles.safeArea}>
       <View style={styles.header}>
         <TouchableOpacity
           onPress={() => {
-            alert('Menu button pressed');
+            alert(strings.MENU_PRESSED);
           }}
           style={styles.iconButton}
         >
@@ -22,7 +22,7 @@ const AppHeader = ({ navigation, title = 'Listen. Feel. Heal' }) => {
         <TouchableOpacity
           onPress={() => {
             // Handle notification press
-            alert('Notifications button pressed');
+            alert(strings.NOTIFICATIONS_PRESSED);
           }}
           style={styles.iconButton}
         >
