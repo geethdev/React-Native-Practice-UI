@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import BottomTabNavigator from './BottomTabNavigator';
+import RootStack from './RootStack';
 import CustomDrawer from '../components/CustomDrawer';
 import { enableScreens } from 'react-native-screens';
 
@@ -22,7 +23,7 @@ export default function Navigation() {
           },
         }}
       >
-        <Drawer.Screen name="Main" component={BottomTabNavigator} />
+        <Drawer.Screen name="Main" component={RootStack} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

@@ -15,6 +15,8 @@ export const strings = {
 
   // Actions
   ADD_ACTIVITY: 'Add an activity',
+  CONTACT_US: 'Contact with us',
+  SIGN_OUT: 'Sign out',
 
   // Alert Messages
   MENU_PRESSED: 'Menu button pressed',

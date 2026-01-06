@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import { commonStyles, strings } from '../constants';
+import { useNavigation } from '@react-navigation/native';
 
 const recommendations = [
   {
@@ -30,8 +31,11 @@ const recommendations = [
 ];
 
 const RecommendationsSection = ({ userName = 'Kevin' }) => {
+  const navigation = useNavigation();
+
   const handleCardPress = item => {
-    alert(strings.ITEM_SELECTED(item.title, item.subtitle));
+    // navigate to Detail screen in the RootStack
+    navigation.navigate('Detail', { item });
   };
 
   const renderItem = ({ item }) => (

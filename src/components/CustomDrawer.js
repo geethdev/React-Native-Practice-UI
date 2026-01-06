@@ -12,30 +12,50 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { colors, spacing, strings } from '../constants';
 
 const CustomDrawer = ({ navigation }) => {
+  const handleNavigateHome = () => {
+    navigation.closeDrawer();
+    navigation.navigate('Main', { screen: 'Home' });
+  };
+
+  const handleNavigateMoods = () => {
+    navigation.closeDrawer();
+    navigation.navigate('Main', { screen: 'Explore' });
+  };
+
+  const handleContact = () => {
+    navigation.closeDrawer();
+    alert(strings.CONTACT_US || 'Contact with us');
+  };
+
+  const handleSignOut = () => {
+    navigation.closeDrawer();
+    alert(strings.SIGN_OUT || 'Sign out');
+  };
+
   const menuItems = [
     {
       id: 1,
       label: 'Home',
       icon: 'home-outline',
-      onPress: () => navigation.navigate('Home'),
+      onPress: handleNavigateHome,
     },
     {
       id: 2,
       label: 'Moods',
       icon: 'emoticon-outline',
-      onPress: () => alert('Moods'),
+      onPress: handleNavigateMoods,
     },
     {
       id: 3,
       label: 'Contact with us',
       icon: 'phone-outline',
-      onPress: () => alert('Contact'),
+      onPress: handleContact,
     },
     {
       id: 4,
       label: 'Sign out',
       icon: 'logout',
-      onPress: () => alert('Sign out'),
+      onPress: handleSignOut,
     },
   ];
 
