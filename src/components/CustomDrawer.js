@@ -13,10 +13,30 @@ import { colors, spacing, strings } from '../constants';
 
 const CustomDrawer = ({ navigation }) => {
   const menuItems = [
-    { id: 1, label: 'Home', icon: 'home-outline', onPress: () => navigation.navigate('Home') },
-    { id: 2, label: 'Moods', icon: 'emoticon-outline', onPress: () => alert('Moods') },
-    { id: 3, label: 'Contact with us', icon: 'phone-outline', onPress: () => alert('Contact') },
-    { id: 4, label: 'Sign out', icon: 'logout', onPress: () => alert('Sign out') },
+    {
+      id: 1,
+      label: 'Home',
+      icon: 'home-outline',
+      onPress: () => navigation.navigate('Home'),
+    },
+    {
+      id: 2,
+      label: 'Moods',
+      icon: 'emoticon-outline',
+      onPress: () => alert('Moods'),
+    },
+    {
+      id: 3,
+      label: 'Contact with us',
+      icon: 'phone-outline',
+      onPress: () => alert('Contact'),
+    },
+    {
+      id: 4,
+      label: 'Sign out',
+      icon: 'logout',
+      onPress: () => alert('Sign out'),
+    },
   ];
 
   return (
@@ -27,7 +47,11 @@ const CustomDrawer = ({ navigation }) => {
           style={styles.closeButton}
           onPress={() => navigation.closeDrawer()}
         >
-          <MaterialCommunityIcons name="close" size={24} color={colors.text.secondary} />
+          <MaterialCommunityIcons
+            name="close"
+            size={24}
+            color={colors.text.secondary}
+          />
         </TouchableOpacity>
 
         {/* User Profile Section */}
@@ -42,8 +66,11 @@ const CustomDrawer = ({ navigation }) => {
         </View>
 
         {/* Menu Items */}
-        <ScrollView style={styles.menuContainer} showsVerticalScrollIndicator={false}>
-          {menuItems.map((item) => (
+        <ScrollView
+          style={styles.menuContainer}
+          showsVerticalScrollIndicator={false}
+        >
+          {menuItems.map(item => (
             <TouchableOpacity
               key={item.id}
               style={styles.menuItem}

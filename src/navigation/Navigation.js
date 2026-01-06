@@ -13,7 +13,7 @@ export default function Navigation() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        drawerContent={(props) => <CustomDrawer {...props} />}
+        drawerContent={props => <CustomDrawer {...props} />}
         screenOptions={{
           headerShown: false,
           drawerType: 'front',
