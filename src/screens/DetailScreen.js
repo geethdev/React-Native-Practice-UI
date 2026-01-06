@@ -7,12 +7,19 @@ import BackButton from '../components/BackButton';
 export default function DetailScreen({ route, navigation }) {
   const { item } = route.params || {};
   return (
-    <SafeAreaView edges={["top"]} style={[commonStyles.screenContainer, styles.container]}>
+    <SafeAreaView
+      edges={['top']}
+      style={[commonStyles.screenContainer, styles.container]}
+    >
       <BackButton onPress={() => navigation.goBack()} />
 
       {item ? (
         <>
-          <Image source={{ uri: item.image }} style={styles.image} resizeMode="cover" />
+          <Image
+            source={{ uri: item.image }}
+            style={styles.image}
+            resizeMode="cover"
+          />
           <Text style={styles.title}>{item.title}</Text>
           <Text style={styles.subtitle}>{item.subtitle}</Text>
         </>

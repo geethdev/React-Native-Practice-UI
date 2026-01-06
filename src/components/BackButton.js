@@ -1,7 +1,12 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-export default function BackButton({ onPress, label = 'Back', style, textStyle }) {
+export default function BackButton({
+  onPress,
+  label = 'Back',
+  style,
+  textStyle,
+}) {
   return (
     <TouchableOpacity
       onPress={onPress}
