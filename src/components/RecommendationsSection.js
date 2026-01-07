@@ -1,5 +1,12 @@
 import React, { useRef } from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity, Animated } from 'react-native';
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  Animated,
+} from 'react-native';
 import { commonStyles, strings } from '../constants';
 import { useNavigation } from '@react-navigation/native';
 
@@ -51,7 +58,10 @@ function RecommendationCard({ item, onPress }) {
 
   return (
     <AnimatedTouchable
-      style={[commonStyles.recommendationCard, { transform: [{ scale: scaleAnim }] }]}
+      style={[
+        commonStyles.recommendationCard,
+        { transform: [{ scale: scaleAnim }] },
+      ]}
       onPress={() => onPress(item)}
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}

@@ -15,7 +15,11 @@ export const animationConfig = {
 };
 
 // Fade in animation
-export const fadeIn = (animatedValue, duration = animationConfig.timing.normal, toValue = 1) => {
+export const fadeIn = (
+  animatedValue,
+  duration = animationConfig.timing.normal,
+  toValue = 1,
+) => {
   return Animated.timing(animatedValue, {
     toValue,
     duration,
@@ -24,7 +28,10 @@ export const fadeIn = (animatedValue, duration = animationConfig.timing.normal, 
 };
 
 // Fade out animation
-export const fadeOut = (animatedValue, duration = animationConfig.timing.fast) => {
+export const fadeOut = (
+  animatedValue,
+  duration = animationConfig.timing.fast,
+) => {
   return Animated.timing(animatedValue, {
     toValue: 0,
     duration,
@@ -33,7 +40,10 @@ export const fadeOut = (animatedValue, duration = animationConfig.timing.fast) =
 };
 
 // Slide in from bottom
-export const slideInFromBottom = (animatedValue, duration = animationConfig.timing.normal) => {
+export const slideInFromBottom = (
+  animatedValue,
+  duration = animationConfig.timing.normal,
+) => {
   return Animated.timing(animatedValue, {
     toValue: 0,
     duration,
@@ -42,7 +52,11 @@ export const slideInFromBottom = (animatedValue, duration = animationConfig.timi
 };
 
 // Scale animation (for press effects)
-export const scaleAnimation = (animatedValue, toValue = 0.95, duration = animationConfig.timing.fast) => {
+export const scaleAnimation = (
+  animatedValue,
+  toValue = 0.95,
+  duration = animationConfig.timing.fast,
+) => {
   return Animated.spring(animatedValue, {
     toValue,
     damping: animationConfig.spring.damping,
@@ -58,11 +72,11 @@ export const stagger = (animations, delay = 50) => {
 };
 
 // Sequence animation helper
-export const sequence = (animations) => {
+export const sequence = animations => {
   return Animated.sequence(animations);
 };
 
 // Parallel animation helper
-export const parallel = (animations) => {
+export const parallel = animations => {
   return Animated.parallel(animations);
 };
