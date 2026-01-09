@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Animated,
+} from 'react-native';
 import { colors, spacing } from '../constants';
 import { useRef } from 'react';
 
@@ -38,7 +44,9 @@ export default function BreatheRelaxCard({ onPress }) {
           </View>
           <View style={styles.content}>
             <Text style={styles.title}>Breathe & Relax</Text>
-            <Text style={styles.subtitle}>Calm your mind with guided moments</Text>
+            <Text style={styles.subtitle}>
+              Calm your mind with guided moments
+            </Text>
           </View>
         </TouchableOpacity>
       </Animated.View>

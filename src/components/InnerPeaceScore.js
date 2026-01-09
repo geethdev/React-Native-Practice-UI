@@ -13,7 +13,8 @@ export default function InnerPeaceScore({ score = 0 }) {
         <View style={styles.content}>
           <Text style={styles.cardTitle}>Grow Your Tree</Text>
           <Text style={styles.cardSubtitle}>
-            Track your progress and watch your Tree of Peace grow with each mindful moment
+            Track your progress and watch your Tree of Peace grow with each
+            mindful moment
           </Text>
         </View>
       </View>

@@ -9,7 +9,12 @@ export default function ProgressBarCard({ icon, label, progress = 0.5 }) {
       <View style={styles.content}>
         <Text style={styles.label}>{label}</Text>
         <View style={styles.track}>
-          <View style={[styles.fill, { width: `${Math.min(100, Math.max(0, progress * 100))}%` }]} />
+          <View
+            style={[
+              styles.fill,
+              { width: `${Math.min(100, Math.max(0, progress * 100))}%` },
+            ]}
+          />
         </View>
       </View>
     </View>

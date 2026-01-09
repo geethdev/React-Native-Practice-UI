@@ -42,7 +42,9 @@ export default function ActivityChart() {
         {/* X-axis labels */}
         <View style={styles.xAxisLabels}>
           {daysOfWeek.map((day, index) => (
-            <Text key={index} style={styles.dayLabel}>{day}</Text>
+            <Text key={index} style={styles.dayLabel}>
+              {day}
+            </Text>
           ))}
         </View>
       </View>

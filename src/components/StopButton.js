@@ -4,7 +4,11 @@ import { spacing } from '../constants';
 
 export default function StopButton({ onPress }) {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress} activeOpacity={0.9}>
+    <TouchableOpacity
+      style={styles.button}
+      onPress={onPress}
+      activeOpacity={0.9}
+    >
       <Text style={styles.text}>STOP</Text>
     </TouchableOpacity>
   );

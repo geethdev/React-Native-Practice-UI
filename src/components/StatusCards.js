@@ -26,7 +26,12 @@ export default function StatusCards({ onPressItem }) {
         snapToInterval={cardWidth + spacing.md}
         decelerationRate="fast"
         renderItem={({ item, index }) => (
-          <View style={[styles.itemWrapper, index !== 0 && { marginLeft: spacing.md }]}> 
+          <View
+            style={[
+              styles.itemWrapper,
+              index !== 0 && { marginLeft: spacing.md },
+            ]}
+          >
             <View style={{ width: cardWidth }}>
               <Card
                 icon={item.icon}

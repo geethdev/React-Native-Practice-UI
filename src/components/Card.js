@@ -16,11 +16,17 @@ export default function Card({
   const Container = onPress ? TouchableOpacity : View;
 
   return (
-    <Container style={[styles.card, style]} onPress={onPress} activeOpacity={0.85}>
+    <Container
+      style={[styles.card, style]}
+      onPress={onPress}
+      activeOpacity={0.85}
+    >
       {icon ? <Text style={[styles.icon, iconStyle]}>{icon}</Text> : null}
       <View style={styles.content}>
         {title ? <Text style={[styles.title, titleStyle]}>{title}</Text> : null}
-        {subtitle ? <Text style={[styles.subtitle, subtitleStyle]}>{subtitle}</Text> : null}
+        {subtitle ? (
+          <Text style={[styles.subtitle, subtitleStyle]}>{subtitle}</Text>
+        ) : null}
         {children}
       </View>
     </Container>

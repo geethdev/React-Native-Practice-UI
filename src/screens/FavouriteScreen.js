@@ -17,7 +17,11 @@ export default function FavouriteScreen({ navigation }) {
       <ScrollView contentContainerStyle={{ padding: 16 }}>
         <BreathTimer count={3} timer={'00:47'} label={'Breathe in'} />
 
-        <ProgressBarCard icon={'💬'} label={'Instruction Progress'} progress={0.6} />
+        <ProgressBarCard
+          icon={'💬'}
+          label={'Instruction Progress'}
+          progress={0.6}
+        />
         <ProgressBarCard icon={'🎵'} label={'Music Progress'} progress={0.45} />
 
         <StopButton onPress={handleStop} />
