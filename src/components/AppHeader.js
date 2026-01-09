@@ -10,7 +10,7 @@ const AppHeader = ({ navigation, title = strings.APP_TITLE }) => {
       <View style={styles.header}>
         <TouchableOpacity
           onPress={() => {
-            alert(strings.MENU_PRESSED);
+            navigation.openDrawer();
           }}
           style={styles.iconButton}
         >

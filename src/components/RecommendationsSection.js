@@ -1,6 +1,16 @@
-import React from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
+import React, { useRef } from 'react';
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  Animated,
+} from 'react-native';
 import { commonStyles, strings } from '../constants';
+import { useNavigation } from '@react-navigation/native';
+
+const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
 
 const recommendations = [
   {
@@ -29,16 +39,33 @@ const recommendations = [
   },
 ];
 
-const RecommendationsSection = ({ userName = 'Kevin' }) => {
-  const handleCardPress = item => {
-    alert(strings.ITEM_SELECTED(item.title, item.subtitle));
+function RecommendationCard({ item, onPress }) {
+  const scaleAnim = useRef(new Animated.Value(1)).current;
+
+  const handlePressIn = () => {
+    Animated.spring(scaleAnim, {
+      toValue: 0.95,
+      useNativeDriver: true,
+    }).start();
   };
 
-  const renderItem = ({ item }) => (
-    <TouchableOpacity
-      style={commonStyles.recommendationCard}
-      onPress={() => handleCardPress(item)}
-      activeOpacity={0.8}
+  const handlePressOut = () => {
+    Animated.spring(scaleAnim, {
+      toValue: 1,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  return (
+    <AnimatedTouchable
+      style={[
+        commonStyles.recommendationCard,
+        { transform: [{ scale: scaleAnim }] },
+      ]}
+      onPress={() => onPress(item)}
+      onPressIn={handlePressIn}
+      onPressOut={handlePressOut}
+      activeOpacity={1}
     >
       <Image
         source={{ uri: item.image }}
@@ -51,7 +78,19 @@ const RecommendationsSection = ({ userName = 'Kevin' }) => {
       <Text style={commonStyles.recommendationSubtitle} numberOfLines={1}>
         {item.subtitle}
       </Text>
-    </TouchableOpacity>
+    </AnimatedTouchable>
+  );
+}
+
+const RecommendationsSection = ({ userName = 'Kevin' }) => {
+  const navigation = useNavigation();
+
+  const handleCardPress = item => {
+    navigation.navigate('Detail', { item });
+  };
+
+  const renderItem = ({ item }) => (
+    <RecommendationCard item={item} onPress={handleCardPress} />
   );
 
   return (

@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { colors } from './colors';
 import { spacing } from './spacing';
+import { typography } from './typography';
 
 export const commonStyles = StyleSheet.create({
   // Container Styles
@@ -18,37 +19,37 @@ export const commonStyles = StyleSheet.create({
   // Text Styles
   screenTitle: {
     fontSize: 18,
-    fontWeight: '600',
+    fontFamily: typography.family.semibold,
     color: colors.text.primary,
   },
 
   heading1: {
     fontSize: 24,
-    fontWeight: '700',
+    fontFamily: typography.family.bold,
     color: colors.text.primary,
   },
 
   heading2: {
     fontSize: 20,
-    fontWeight: '600',
+    fontFamily: typography.family.semibold,
     color: colors.text.primary,
   },
 
   heading3: {
     fontSize: 16,
-    fontWeight: '600',
+    fontFamily: typography.family.semibold,
     color: colors.text.primary,
   },
 
   bodyText: {
     fontSize: 14,
-    fontWeight: '400',
+    fontFamily: typography.family.regular,
     color: colors.text.secondary,
   },
 
   caption: {
     fontSize: 12,
-    fontWeight: '400',
+    fontFamily: typography.family.regular,
     color: colors.text.tertiary,
   },
 
@@ -90,13 +91,13 @@ export const commonStyles = StyleSheet.create({
 
   moodLabel: {
     fontSize: 12,
-    fontWeight: '500',
+    fontFamily: typography.family.medium,
     color: colors.text.secondary,
   },
 
   moodLabelSelected: {
     color: '#FFFFFF',
-    fontWeight: '600',
+    fontFamily: typography.family.semibold,
   },
 
   // Recommendations Section Styles
@@ -131,14 +132,14 @@ export const commonStyles = StyleSheet.create({
 
   recommendationTitle: {
     fontSize: 14,
-    fontWeight: '600',
+    fontFamily: typography.family.semibold,
     color: colors.text.primary,
     marginTop: spacing.sm,
   },
 
   recommendationSubtitle: {
     fontSize: 12,
-    fontWeight: '400',
+    fontFamily: typography.family.regular,
     color: colors.text.secondary,
     marginTop: spacing.xxs,
   },
@@ -187,14 +188,14 @@ export const commonStyles = StyleSheet.create({
 
   gridCardTitle: {
     fontSize: 14,
-    fontWeight: '600',
+    fontFamily: typography.family.semibold,
     color: colors.text.primary,
     marginBottom: spacing.xxs,
   },
 
   gridCardSubtitle: {
     fontSize: 11,
-    fontWeight: '400',
+    fontFamily: typography.family.regular,
     color: colors.text.secondary,
   },
 
@@ -240,14 +241,14 @@ export const commonStyles = StyleSheet.create({
 
   routineTime: {
     fontSize: 12,
-    fontWeight: '400',
+    fontFamily: typography.family.regular,
     color: colors.text.tertiary,
     marginBottom: spacing.xxs,
   },
 
   routineActivity: {
     fontSize: 15,
-    fontWeight: '500',
+    fontFamily: typography.family.medium,
     color: colors.text.primary,
   },
 
@@ -272,7 +273,7 @@ export const commonStyles = StyleSheet.create({
 
   addActivityText: {
     fontSize: 15,
-    fontWeight: '500',
+    fontFamily: typography.family.medium,
     color: '#00BCD4',
   },
 });
