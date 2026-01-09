@@ -1,15 +1,40 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, ScrollView, StyleSheet } from 'react-native';
 import AppHeader from '../components/AppHeader';
-import { commonStyles } from '../constants';
+import InnerPeaceScore from '../components/InnerPeaceScore';
+import ActivityChart from '../components/ActivityChart';
+import StatusCards from '../components/StatusCards';
+import BreatheRelaxCard from '../components/BreatheRelaxCard';
+import { commonStyles, spacing } from '../constants';
 
 export default function BreatheScreen({ navigation }) {
+  const handleBreathePress = () => {
+    console.log('Start breathing exercise');
+  };
+
   return (
     <View style={commonStyles.screenContainer}>
       <AppHeader navigation={navigation} />
-      <View style={commonStyles.centeredContent}>
-        <Text style={commonStyles.screenTitle}>Breathe</Text>
-      </View>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.content}
+        showsVerticalScrollIndicator={false}
+      >
+        <InnerPeaceScore score={0} />
+        <ActivityChart />
+        <StatusCards />
+        <BreatheRelaxCard onPress={handleBreathePress} />
+      </ScrollView>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  scrollView: {
+    flex: 1,
+  },
+  content: {
+    padding: spacing.md,
+    paddingBottom: spacing.xl,
+  },
+});
